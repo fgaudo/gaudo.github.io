@@ -1,1 +1,10 @@
-theme: jekyll-theme-cayman
+author:
+  name: "Francesco Gaudenzi"
+  email: fgaudo@gmail.com
+
+copyright: "(c) Francesco Gaudenzi, 2017"
+
+exclude:
+  - README.md
+  
+markdown: kramdown
