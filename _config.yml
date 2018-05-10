@@ -8,3 +8,5 @@ exclude:
   - README.md
   
 markdown: kramdown
+
+theme: minima
