@@ -1,0 +1,9 @@
+@import '../settings/variables';
+
+.name {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(40px, 5vw, 60px);
+    color: white;
+    white-space: nowrap;
+}

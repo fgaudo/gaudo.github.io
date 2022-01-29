@@ -1,0 +1,64 @@
+@import '../settings/variables';
+
+.wrapper {
+    color: $textFontColor;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    max-width: $wrapperWidth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $headerHeight;
+}
+
+.headerNav {
+    height: 100%;
+    width: 80%;
+    max-width: $wrapperWidth;
+}
+
+.headerMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.headerMenuItem {
+    flex: 0 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 5px 1rem 5px;
+}
+
+.headerMenuItem:first-of-type {
+    padding-left: 0;
+}
+
+.headerMenuItem:last-of-type {
+    padding-right: 0;
+}
+
+.headerMenuItem  > a{
+    color: $textFontColor;
+    text-decoration: none;
+}
+
+
+@media(max-width: 315px) {
+    .headerMenuItem {
+    }
+}

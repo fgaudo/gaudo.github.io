@@ -1,0 +1,9 @@
+@import 'settings/variables';
+@import 'reset';
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  padding-top: $headerHeight;
+  background-color: $backgroundColor;
+}
