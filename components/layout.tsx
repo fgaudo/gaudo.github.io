@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                     </ul>
                 </nav>
             </header>
-            <main>{children}</main>
+            <main className={style.main}>{children}</main>
         </div>
     )
 }

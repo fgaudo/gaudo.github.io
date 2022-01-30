@@ -8,11 +8,22 @@ const Home: NextPage = () => {
       <Head>
         <title>About | Francesco Gaudenzi</title>
       </Head>
-      <p>Hello. My name is
-        <span className={styles.name}>Francesco Gaudenzi.</span>
-      </p>
-      <p>I’m a simple guy, who enjoys coding and gaming.<br />
-        If you’re interested in having a chat, feel free to contact me!</p>
+      <div className={styles.content}>
+
+        <div className={styles.presentation}>
+          <p className={styles.presentationParagraph}>Hello. My name is
+            <span className={styles.name}>Francesco Gaudenzi.</span>
+          </p>
+          <p className={styles.presentationParagraph}>I’m a simple guy, who enjoys coding and gaming.<br />
+            If you’re interested in having a chat, feel free to contact me!
+          </p>
+        </div>
+        <picture className={styles.picture}>
+          <div className={styles.pictureImageTrick}>
+            <img className={styles.pictureImage} src="/gaudo.jpg" />
+          </div>
+        </picture>
+      </div>
     </>
   )
 }

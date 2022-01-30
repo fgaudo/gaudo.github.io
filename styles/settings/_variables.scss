@@ -1,8 +1,9 @@
 $primaryColor: #250804;
-$secondaryColor: #7B6CEF;
-$backgroundColor: #EB5A47;
+$secondaryColor: transparent;
+$backgroundColor: #0a0a0a;
+$backgroundSecondaryColor: #751f1f;
 $headingsFontColor: #fff;
-$textFontColor: #FEF6F5;
+$textFontColor: #faded7;
 
-$headerHeight: 80px;
-$wrapperWidth: 600px
+$headerHeight: clamp(40px, 20vw, 120px);
+$wrapperWidth: 1080px

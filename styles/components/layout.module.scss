@@ -9,14 +9,22 @@
 }
 
 .header {
+    backdrop-filter: blur(2px);
     position: fixed;
+    opacity: 90;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(rgba(#000, 0.8), rgba($backgroundColor,0.8));
     min-height: $headerHeight;
+}
+
+.main {
+    width: 100%;
 }
 
 .headerNav {
@@ -40,7 +48,7 @@
     text-align: center;
     flex-wrap: wrap;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Oswald, sans-serif;
     padding: 1rem 5px 1rem 5px;
 }
 
@@ -53,7 +61,7 @@
 }
 
 .headerMenuItem  > a{
-    color: $textFontColor;
+    color: #fff;
     text-decoration: none;
 }
 

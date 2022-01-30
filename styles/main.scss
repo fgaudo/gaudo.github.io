@@ -2,8 +2,8 @@
 @import 'reset';
 
 html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: clamp(12px, 3vw, 15px);
   padding-top: $headerHeight;
   background-color: $backgroundColor;
 }

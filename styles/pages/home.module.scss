@@ -5,5 +5,58 @@
     font-family: 'Oswald', sans-serif;
     font-size: clamp(40px, 5vw, 60px);
     color: white;
-    white-space: nowrap;
+    text-shadow: 2px 2px #740909;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.picture {
+    margin-left: 4vw;
+    flex:1;
+    max-width: 400px;
+    position: relative;
+    z-index: -1;
+}
+
+.pictureImage {
+    filter: saturate(30%);
+    transform: rotate(20deg);
+    width: 100%;
+
+    background-color: $backgroundColor;
+    overflow: hidden;
+    
+}
+
+.pictureImageTrick {
+    transform: rotate(-20deg);
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 5px $backgroundSecondaryColor;
+    border-radius: 50%;
+    border: 2px solid $backgroundColor;
+}
+
+
+.presentation{
+    flex:1;
+    margin-right: 4vw;
+}
+
+@media (max-width: 350px){
+    .picture {
+        order: 1;
+        flex: 0 0 100%;
+        margin: 0;
+    }
+
+    .presentation {
+        order: 2;
+        flex: 1;
+        margin: 0;
+    }
+    
 }
