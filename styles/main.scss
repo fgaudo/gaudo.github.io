@@ -1,9 +1,0 @@
-@import 'settings/variables';
-@import 'reset';
-
-html {
-  font-family: 'Roboto Slab', sans-serif;
-  font-size: clamp(12px, 3vw, 15px);
-  padding-top: $headerHeight;
-  background-color: $backgroundColor;
-}

@@ -1,4 +1,12 @@
-@import '../settings/variables';
+@import '@/presentation/styles/variables';
+
+.wrap {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: clamp(12px, 3vw, 15px);
+    padding-top: $headerHeight;
+    background-color: $backgroundColor;
+    height: 100vh;
+}
 
 .wrapper {
     color: $textFontColor;
@@ -63,10 +71,4 @@
 .headerMenuItem  > a{
     color: #fff;
     text-decoration: none;
-}
-
-
-@media(max-width: 315px) {
-    .headerMenuItem {
-    }
 }
