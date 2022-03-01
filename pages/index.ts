@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { home } from '@/presentation/views/home'
+import home from '@/presentation/views/home'
 
 const Home: NextPage = () => {
   return home({});
