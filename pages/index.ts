@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import home from '@/presentation/views/home'
+import { GdHome } from '@/presentation/views/home'
 
-const Home: NextPage = () => {
-  return home({});
+const GdHomePage: NextPage = () => {
+  return GdHome({});
 }
 
-export default Home;
+export default GdHomePage;

@@ -1,45 +1,73 @@
-import Head from "next/head";
+import classNames from "classnames";
 import Link from "next/link"
-import { ReactNode, useCallback, useEffect, useState } from "react"
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react"
 
-export default ({ children }: { children: ReactNode }) => {
-    const [{ position, direction }, setScroll] = useState<{ position: number, direction: 'up' | 'down' }>({ position: 0, direction: 'up' });
+const header = classNames(
+    'backdrop-blur-sm',
+    'bg-gradient-to-b', 'from-black', 'to-neutral-900/80',
+    'fixed',
+    'w-full',
+    'flex', 'items-center', 'justify-between',
+    'px-3', 'py-3',
+    'h-14',
+    'transition', 'duration-300', 'delay-75',
+);
 
-    const handleNavigation = useCallback(
-        e => {
-            const window = e.currentTarget;
-            setScroll({ direction: position > window.scrollY ? 'up' : 'down', position: window.scrollY });
-        }, [position]
-    );
+const wrapper = classNames(
+    'text-md', 'lg:text-lg', 'xl:text-xl',
+    'bg-neutral-900',
+    'text-white',
+)
 
-    useEffect(() => {
-        setScroll({ position: window.scrollY, direction: 'up' });
-    }, [])
+const profileImage = classNames(
+    'saturate-0',
+    'object-cover',
+    'w-10',
+    'h-10',
+    'rounded-full',
+    'border-2'
+);
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleNavigation);
+const list = classNames(
+    'flex', 'justify-end',
+    'font-display'
+);
 
-        return () => {
-            window.removeEventListener("scroll", handleNavigation);
-        };
-    }, [handleNavigation]);
+const link = classNames('p-2');
 
+const body = classNames(
+    'py-14', 'px-3',
+    'scroll-smooth', 'scroll-py-14',
+    'overflow-y-scroll',
+    'h-screen',
+);
 
-    const menuDisappear = direction === 'down' ? '-translate-y-28' : 'translate-y-0';
+export const GdLayout = ({ children }: { children: ReactNode }) => {
 
     return (
-        <div className="text-md lg:text-lg xl:text-xl bg-background text-white">
-            <header className={"backdrop-blur-sm bg-gradient-to-b from-black to-background/80 fixed w-full flex items-center justify-between px-5 py-3 transition duration-300 delay-75 " + menuDisappear}>
-                <Link href={'/'}><a><img className="saturate-0 object-cover w-12 h-12 rounded-full border-2" src="/gaudo.jpg" /></a></Link>
+        <div className={wrapper}>
+            <header className={header}>
+                <Link href={'/'}>
+                    <a href={links.home}>
+                        <img className={profileImage} src="/gaudo.jpg" />
+                    </a>
+                </Link>
                 <nav>
-                    <ul className="flex justify-end font-display">
-                        <li><Link href={'/'}><a className="p-2">About</a></Link></li>
-                        <li><Link href={'/skills'}><a className="p-2">Skills</a></Link></li>
-                        <li><Link href={'/contacts'}><a className="p-2">Contact</a></Link></li>
+                    <ul className={list}>
+                        <li><a href={'#' + links.about} className={link}>About</a></li>
+                        <li><a href={'#' + links.skills} className={link}>Skills</a></li>
+                        <li><a href={'#' + links.contact} className={link}>Contact</a></li>
                     </ul>
                 </nav>
             </header>
-            <main className="py-28">{children}</main>
-        </div >
+            <main className={body}>{children}</main>
+        </div>
     )
+}
+
+export const links = {
+    home: 'home',
+    skills: 'skills',
+    about: 'about',
+    contact: 'contact',
 }
