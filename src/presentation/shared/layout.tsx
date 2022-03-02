@@ -71,3 +71,5 @@ export const links = {
     about: 'about',
     contact: 'contact',
 }
+
+export default GdLayout;

@@ -75,3 +75,5 @@ export const GdHome = (_: HomeModel) => {
         </GdLayout >
     );
 }
+
+export default GdHome;
