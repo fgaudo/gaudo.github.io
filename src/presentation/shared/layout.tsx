@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link"
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react"
+import { ReactNode } from "react"
 
 const header = classNames(
     'backdrop-blur-sm',
@@ -36,10 +36,7 @@ const list = classNames(
 const link = classNames('p-2');
 
 const body = classNames(
-    'py-14', 'px-3',
-    'scroll-smooth', 'scroll-py-14',
-    'overflow-y-scroll',
-    'h-screen',
+    'px-3',
 );
 
 export const GdLayout = ({ children }: { children: ReactNode }) => {
