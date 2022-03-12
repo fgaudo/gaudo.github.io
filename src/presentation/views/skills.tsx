@@ -7,7 +7,7 @@ export type SkillsModel = {
     }
 }
 
-export default (model: SkillsModel) => {
+export const GdSkills = (model: SkillsModel) => {
     return (
         <Layout>
             <Head>
@@ -25,3 +25,5 @@ export default (model: SkillsModel) => {
         </Layout>
     )
 }
+
+export default GdSkills;

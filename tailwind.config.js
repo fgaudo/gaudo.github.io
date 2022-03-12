@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Oswald', ...defaultTheme.fontFamily.sans],
+    },
+    extend: {
+
     }
   },
   plugins: [],
